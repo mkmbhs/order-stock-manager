@@ -30,14 +30,14 @@ A robust Go-based application for managing product orders and ingredient stock i
 
 
 
-docker compose up -d
+    `docker compose up -d`
 
 
 3. Run the application:
 
 
 
-go run main.go
+    `go run main.go`
 
 
 4. The application is now running and ready to use.
