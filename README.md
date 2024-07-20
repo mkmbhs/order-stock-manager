@@ -81,7 +81,7 @@ For further assistance, please open an issue on the GitHub repository.
 
 ## Contact
 
-For support or queries, please contact [your-email@example.com](mailto:your-email@example.com) or open an issue on GitHub.
+For support or queries, please open an issue on GitHub.
 
 
 
