@@ -1,48 +1,87 @@
 # Order Stock Manager
 
-## About
-
-Order Stock Manager is a Go-based application designed to manage product orders and ingredient stock for food service operations. It uses MongoDB to store and manage data about products, ingredients, and their stock levels.
-
-## How it works
-
-1. The system maintains two main collections: Products and Ingredients.
-2. Products are defined with their ingredients and required quantities.
-3. Ingredients are tracked with their current stock levels.
-4. When orders are processed, the system automatically updates ingredient stock levels.
-5. The application provides real-time stock management and can alert when ingredients are running low.
+A robust Go-based application for managing product orders and ingredient stock in food service operations, utilizing MongoDB for efficient data management.
 
 ## Features
 
-- Product management with ingredient details
-- Real-time stock tracking
-- Order processing with automatic stock updates
+- Product management with detailed ingredient tracking
+- Real-time stock level monitoring
+- Automated stock updates upon order processing
 - Separate environments for production and testing
+- Docker-based deployment for easy setup and scalability
 
 ## How to run
 
-1. Ensure you have Docker installed on your system.
-2. Clone this repository to your local machine.
-3. Navigate to the project directory.
-4. Run the following commands:
+### Prerequisites
+
+- Docker
+- Go (version 1.x or later)
+
+### Steps
+
+1. Clone this repository:
 
 
 
-
-1. Run `docker compose up -d`
-2. Run `go run main.go`
+    ```git clone https://github.com/yourusername/order-stock-manager.git cd order-stock-manager```
 
 
-5. The application should now be running and ready to use.
+2. Start the MongoDB container:
 
-## Database
 
-The application uses two MongoDB databases:
-- `order-stock-manager` for production
-- `order-stock-manager-test` for testing
 
-Seed data is provided for both environments in the `seeds` directory.
+docker compose up -d
 
-## Development
 
-To contribute or modify the application, refer to the Go files in the project. The main application logic can be found in `main.go` and the `model` directory.
+3. Run the application:
+
+
+
+go run main.go
+
+
+4. The application is now running and ready to use.
+
+## Configuration
+
+Environment variables (if any) can be set in a `.env` file in the project root.
+
+## Testing
+
+To run tests using the test database:
+
+1. Ensure the MongoDB container is running.
+2. Execute:
+
+
+
+go test ./...
+
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Troubleshooting
+
+If you encounter any issues, please check the following:
+- Ensure Docker is running and the MongoDB container is up
+- Verify that all required Go packages are installed
+- Check the application logs for any error messages
+
+For further assistance, please open an issue on the GitHub repository.
+
+## Contact
+
+For support or queries, please contact [your-email@example.com](mailto:your-email@example.com) or open an issue on GitHub.
+
+
+
