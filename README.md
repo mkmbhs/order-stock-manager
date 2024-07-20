@@ -23,21 +23,34 @@ A robust Go-based application for managing product orders and ingredient stock i
 
 
 
-    ```git clone https://github.com/yourusername/order-stock-manager.git cd order-stock-manager```
+    ```bash 
+        git clone https://github.com/yourusername/order-stock-manager.git 
+        cd order-stock-manager
+    ```
 
 
-2. Start the MongoDB container:
+2. Install dependencies:
+
+    ```bash
+    go mod tidy
+    ```
+
+3. Start the MongoDB container:
 
 
 
-    `docker compose up -d`
+    ```bash
+    docker compose up -d
+    ```
 
 
-3. Run the application:
+4. Run the application:
 
 
 
-    `go run main.go`
+    ```bash
+    go run main.go
+    ```
 
 
 4. The application is now running and ready to use.
@@ -55,7 +68,9 @@ To run tests using the test database:
 
 
 
-go test ./...
+```bash
+go test ./...  
+```
 
 
 ## Contributing
